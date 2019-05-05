@@ -125,7 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/uploaded/'
-MEDIA_ROOT= os.path.join(BASE_DIR, '../media_root')
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media_root')
 
 # AUTHENTICATION AND USERS
 LOGIN_REDIRECT_URL = 'core:movie_list'
