@@ -51,6 +51,7 @@
             </form>
         {% else %}
             <p>Log in to vote for this movie.</p>
+            <a href="{% url 'user:login' %}" class="btn btn-primary">Login</a>
         {% endif %}
     </div>
 {% endblock %}

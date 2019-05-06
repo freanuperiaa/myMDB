@@ -14,6 +14,12 @@ from .models import Movie, Person, Vote
 class MovieListView(ListView):
     model = Movie
     paginate_by = 10
+    queryset = Movie.objects.all().order_by('title')
+
+
+class TopMovies(ListView):
+    template_name = 'core/topmovies_list.html'
+    queryset = Movie.objects.top_movies(limit=10)
 
 
 class MovieDetailView(DetailView):
