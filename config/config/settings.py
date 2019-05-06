@@ -87,6 +87,16 @@ DATABASES = {
 }
 
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, '../file_cache'),
+    },
+    'otherCache': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'othercache',
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -105,6 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_USE_SESSIONS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
