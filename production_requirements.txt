@@ -1,0 +1,4 @@
+-r base_requirements.txt
+django-storages==1.6.5
+boto3==1.4.7
+uwsgi==2.0.15

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+exe /usr/sbin/nginx \
+    -c /etc/nginx/nginx.conf \
+    -g "daemon off;"
